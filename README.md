@@ -2,7 +2,9 @@
 Estimate 2D smoothing for 2d coordinates.
 
 # Motivation
-This library is to estimate values (smoothing or density) for 2D discret points. It can be geographical coordinates or x,y pairs. However, currently it only supports Euclidean distance, which means that you will get distorted images for latitude and longitude. It would be useful if you have bunch of points and want to get some estimations, such as KDE or a heatmap. 
+This library is to estimate values (smoothing or density) for 2D discret points. It can be geographical coordinates or x,y pairs. However, currently it only supports Euclidean distance, which means that you will get distorted images for latitude and longitude. It would be useful if you have bunch of points and want to get some estimations, such as KDE or a heatmap.
+
+Although this library can achieve reasonable performance through KD tree, Gaussian Blur might be a better alternative if you just want some blurring effect.
 
 # Example
 
@@ -19,5 +21,5 @@ const mySmoothing = new Smoothing({
 });
 const point = [0.5, 0.5];
 // Inverse Distance Weighting
-const idwResult = mySmoothing.estimate();
+const idwResult = mySmoothing.estimate(point);
 ```

@@ -1,0 +1,42 @@
+{
+  "name": "point-2d-smoothing",
+  "version": "0.0.0",
+  "description": "Estimate 2D smoothing for 2d coordinates.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint . --ignore-path .gitignore",
+    "build": "npm run clean && NODE_ENV=production && babel ./src --out-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fwang49asu/point-2d-smoothing.git"
+  },
+  "keywords": [
+    "smoothing",
+    "idw",
+    "kde"
+  ],
+  "author": "Feng Wang <feng.wang1@ge.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fwang49asu/point-2d-smoothing/issues"
+  },
+  "homepage": "https://github.com/fwang49asu/point-2d-smoothing#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
+    "eslint": "^5.0.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "mocha": "^5.2.0",
+    "sinon": "^6.0.1"
+  },
+  "dependencies": {
+    "static-kdtree": "^1.0.2"
+  }
+}

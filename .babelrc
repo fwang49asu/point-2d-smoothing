@@ -1,0 +1,13 @@
+{
+  "env": {
+    "production": {
+      "presets": ["env", "react"]
+    },
+    "development": {
+      "presets": ["env", "react"]
+    },
+    "test": {
+      "presets": ["env", "react"]
+    }
+  }
+}

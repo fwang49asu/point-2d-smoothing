@@ -11,7 +11,15 @@ Although this library can achieve reasonable performance through KD tree, Gaussi
 ```javascript
 import Smoothing from 'point-2d-smoothing';
 // only have two peaks
-const data = [[0, 0, 1], [1, 1, 1]];
+const data = [{
+  x: 0,
+  y: 0,
+  value: 1,
+}, {
+  x: 1,
+  y: 1,
+  value: 1,
+}];
 const mySmoothing = new Smoothing({
   data,
   algorithm: 'IDW',

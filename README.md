@@ -23,3 +23,11 @@ const point = [0.5, 0.5];
 // Inverse Distance Weighting
 const idwResult = mySmoothing.estimate(point);
 ```
+
+# Thing on the road
+- [x] Inverse Distance Weight (IDW) algorithm
+- [ ] Test for IDW
+- [ ] KDE with Epanechnikov kernel
+- [ ] KDE with Gaussian kernel
+- [ ] Gaussian Blur (I might not do it because it will essentially get the same heatmap with KDE)
+- [ ] Documents

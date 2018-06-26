@@ -1,6 +1,6 @@
 {
   "name": "point-2d-smoothing",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Estimate 2D smoothing for 2d coordinates.",
   "main": "dist/index.js",
   "scripts": {

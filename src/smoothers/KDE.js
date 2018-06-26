@@ -39,7 +39,7 @@ const kernels = {
 class KDE extends Base {
   deriveOptions() {
     const result = Object.assign({}, defaultOptions, this.options);
-    return Object.assign({}, defaultAlgorithmOptions[result.kernel], this.options);
+    return Object.assign({}, result, defaultAlgorithmOptions[result.kernel], this.options);
   }
 
   estimate(point) {

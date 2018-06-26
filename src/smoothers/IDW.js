@@ -11,7 +11,7 @@ const defaultOptions = {
   degree: 2,
   radius: 1,
 };
-
+// Modified Shepard's method
 class IDW extends Base {
   deriveOptions() {
     return Object.assign({}, defaultOptions, this.options);
@@ -40,9 +40,9 @@ class IDW extends Base {
     let result = 0;
     let base = 0;
     nodesToUse.forEach((d) => {
-      const distance = intPow(d.distance, degree);
-      base += distance;
-      result += distance * d.value;
+      const w = intPow(1 - d.distance / radius, degree);
+      base += w;
+      result += w * d.value;
     });
     return base < epsilon ? 0 : (result / base);
   }

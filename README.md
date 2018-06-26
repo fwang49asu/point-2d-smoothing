@@ -32,7 +32,7 @@ const point = [0.5, 0.5];
 const idwResult = mySmoothing.estimate(point);
 ```
 
-# Thing on the road
+# Things on the road
 - [x] Inverse Distance Weight (IDW) algorithm
 - [ ] Test for IDW
 - [ ] KDE with Epanechnikov kernel

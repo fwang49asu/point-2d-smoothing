@@ -16,10 +16,10 @@ const p = {
 };
 
 const mySmoother = new Smoother(data, {
-  algorithm: 'IDW',
+  algorithm: 'KDE',
   options: {
-    radius: 0.6,
-    degree: 2,
+    kernel: 'gaussian',
+    bandwidth: 0.6,
   },
 });
 

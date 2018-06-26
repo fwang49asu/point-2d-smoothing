@@ -32,10 +32,22 @@ const point = [0.5, 0.5];
 const idwResult = mySmoothing.estimate(point);
 ```
 
+Currently supported kernels in KDE:
+- gaussian
+- tophat (aka uniform or "rectangular window")
+- epanechnikov (aka parabolic)
+- linear (aka triangular)
+- cosine
+
+One parameter is needed: bandwidth (default value is 1).
+
+As gaussian is not bandwidth-bounded, you can provide a option "searchRatio" to expand the search radius of neighbors. By default, this value is 3, which means that the algorithm will use all points within the circle of radius 3*bandwidth will be included in calculation.
+
 # Things on the road
 - [x] Inverse Distance Weight (IDW) algorithm
 - [ ] Test for IDW
-- [ ] KDE with Epanechnikov kernel
-- [ ] KDE with Gaussian kernel
-- [ ] Gaussian Blur (I might not do it because it will essentially get the same heatmap with KDE)
+- [x] KDE with Epanechnikov kernel
+- [x] KDE with Gaussian kernel
+- [ ] Test for KDE
+- [ ] More distance function support, such as great circle distance
 - [ ] Documents

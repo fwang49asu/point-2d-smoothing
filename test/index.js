@@ -11,15 +11,15 @@ const data = [{
   value: 1,
 }];
 const p = {
-  x: 0.5,
-  y: 0.5,
+  x: 0.25,
+  y: 0.25,
 };
 
 const mySmoother = new Smoother(data, {
   algorithm: 'KDE',
   options: {
-    kernel: 'gaussian',
-    bandwidth: 0.6,
+    kernel: 'epanechnikov',
+    bandwidth: 0.4,
   },
 });
 

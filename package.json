@@ -4,6 +4,7 @@
   "description": "Estimate 2D smoothing for 2d coordinates.",
   "main": "dist/index.js",
   "scripts": {
+    "clean": "rm -rf ./dist",
     "lint": "eslint . --ignore-path .gitignore",
     "build": "npm run clean && NODE_ENV=production && babel ./src --out-dir ./dist"
   },
@@ -37,6 +38,7 @@
     "sinon": "^6.0.1"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "static-kdtree": "^1.0.2"
   }
 }
